@@ -15,13 +15,12 @@ Jonas Dreßler
     </head>
     <body>
         <nav>
+            <img id= "land" src="wizard.jpg" alt="wizard spieleverpackung">
             <ul>
                 <li><a href="#wtf">Block der Wahrheit</a></li>
-                <li><a href="#wz">Spielregeln</a></li>
+                <li id="nav2"><a href="#wz">Spielregeln</a></li>
             </ul>
         </nav>
-        <img id= "land" src="landscape.jpg" alt="Fantasy Landscape">
-        <h1 id="überschrift">Wizard</h1>
 
         
         
@@ -29,11 +28,11 @@ Jonas Dreßler
         <main>
             <form id="wtf">
             
-           <article>
-               <h2>Block der Wahrheit</h2>
+           <div>
+               <h1>Block der Wahrheit</h1>
                <p>Tragt in der ersten Zeile eure Namen ein. Wenn ihr auf "Los geht's" drückt beginnt die erste Runde.<br> Tragt nun vor jeder Runde die angesagten Stiche unter den Namen ein. Drückt "Weiter" wenn alle Angesagten Stiche eingetragen sind. <br>Nun spielt ihr eure Runde fertig. Nachdem ALLE Karten ausgepielt wurden tragt ihr jetzt die Anzahl der Stiche ein die jeder gewonnen hat. Dann auf "nächste Runde" drücken und eure Punkte werden berechnet.<br> Die Anzahl der Runden wird unter der Tabelle ausgegeben. Wenn alle Runden gespielt wurden könnt ihr sehen wer gewonnen hat. <br> Viel spaß ihr kleinen Zauberlehrlinge. </p>
-            </article> 
-            <input id="input2" type="reset" value="Kein Bock mehr">
+           </div> 
+            <input id="input2" type="reset" value="Neues Spiel">
             
             <div id=tabelle>
             <table>    
@@ -76,19 +75,17 @@ Jonas Dreßler
             </table>
         </div>
                 <input id="input1" type="submit" value="Los geht's!">
-                
-                
             </form>
-              <p id="runde">Ihr habt noch nicht angefangen zu spielen... </p>
+              <p id="runde">Ihr habt noch nicht angefangen zu spielen</p>
             <div id="wz">  
-            <div>
+            <!-- <div>
             <figure> 
                 <img src="wizzard.jpg" alt="Wizzard Spielverpackung">
-                <figcaption> Wizzard Spieleverpackung</figcaption>
+                <!-- <figcaption> Wizard Spieleverpackung</figcaption> -->
             </figure>
-            </div>
+            </div> -->
             <div>
-                <h2> Spielregeln</h2>
+                <h1> Spielregeln</h1>
                 <p>Ein Spiel hat 10 bis 20 Runden. In der ersten Runde bekommt jeder Spieler eine Spielkarte, in der zweiten zwei und so weiter. Die restlichen Karten werden verdeckt in die Mitte gelegt, nur die oberste wird aufgedeckt. Ihre Farbe ist die Trumpffarbe. Ist diese Karte ein Narr oder bleibt keine Karte übrig, so gibt es keine Trumpffarbe. Wird ein Zauberer aufgedeckt, bestimmt der ausgebende Spieler die Trumpffarbe, nachdem er seine Handkarten angeschaut hat. Nun müssen die Spieler der Reihe nach schätzen, wie viele Stiche sie in der Runde machen werden. Der Spieler links vom Geber beginnt, die Angaben werden in der Tabelle notiert. <br> <small>Wird mit der <i>Canadian Rule </i> oder <i>Plus/minus-Eins-Variante </i> gespielt, darf die Summe der geschätzten Stiche nicht gleich der Zahl der erwarteten Stiche sein. Wenn zum Beispiel bei fünf Karten drei Stiche angesagt wurden, dürfte der letzte Spieler nicht „zwei“ sagen.</small><br>Sind alle Angaben gemacht, spielt der Spieler links vom Geber eine Karte aus, die anderen folgen im Uhrzeigersinn: ein <i>Stich</i>.</p>
                 <ol>
                     <li>Ein Zauberer oder ein Narr kann immer ausgespielt werden.</li>

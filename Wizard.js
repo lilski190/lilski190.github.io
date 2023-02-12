@@ -81,7 +81,7 @@ Jonas Dreßler
         punkte = [];
         currentRound = 0;
         actualRound = 0;
-        updateRoundText("Ihr habt noch nicht angefangen zu spielen...")
+        updateRoundText("Ihr habt noch nicht angefangen zu spielen")
     }
 
     function nextRound(e) {
@@ -102,7 +102,7 @@ Jonas Dreßler
             }
 
             if (a.length < 3){
-                showFailureMessage("Zu wenig Spieler");
+                showFailureMessage("Zu wenige Spieler");
                 return;
             }
 
@@ -123,7 +123,7 @@ Jonas Dreßler
         } else if (currentRound % 2 === 1) {
             for (let i = 0; i < nPlayers; i++) {
                 if (stiche[i].value === "") {
-                    showFailureMessage("Gib mal Zahlen ein");
+                    showFailureMessage("Bitte Zahlen eingeben");
                     return;
                 }
             }
@@ -138,7 +138,7 @@ Jonas Dreßler
         } else if (currentRound % 2 === 0) {
             for (let i = 0; i < nPlayers; i++) {
                 if (actualStiche[i].value === "") {
-                    showFailureMessage("Gib mal Zahlen ein");
+                    showFailureMessage("Bitte Zahlen eingeben");
                     return;
                 }
             }
