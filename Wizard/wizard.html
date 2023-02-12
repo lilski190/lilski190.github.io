@@ -1,0 +1,111 @@
+<!--
+Übung 10 Web Engineering
+Gruppe:
+Lilian Alice Drabinski
+Jonas Dreßler
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>Wizard</title>
+        <link rel="stylesheet" href="wizard.css">
+        <script src="Wizard.js" defer async></script>
+    </head>
+    <body>
+        <nav>
+            <img id= "land" src="wizard.jpg" alt="wizard spieleverpackung">
+            <ul>
+                <li><a href="#wtf">Block der Wahrheit</a></li>
+                <li id="nav2"><a href="#wz">Spielregeln</a></li>
+            </ul>
+        </nav>
+
+        
+        
+
+        <main>
+            <form id="wtf">
+            
+           <div>
+               <h1>Block der Wahrheit</h1>
+               <p>Tragt in der ersten Zeile eure Namen ein. Wenn ihr auf "Los geht's" drückt beginnt die erste Runde.<br> Tragt nun vor jeder Runde die angesagten Stiche unter den Namen ein. Drückt "Weiter" wenn alle Angesagten Stiche eingetragen sind. <br>Nun spielt ihr eure Runde fertig. Nachdem ALLE Karten ausgepielt wurden tragt ihr jetzt die Anzahl der Stiche ein die jeder gewonnen hat. Dann auf "nächste Runde" drücken und eure Punkte werden berechnet.<br> Die Anzahl der Runden wird unter der Tabelle ausgegeben. Wenn alle Runden gespielt wurden könnt ihr sehen wer gewonnen hat. <br> Viel spaß ihr kleinen Zauberlehrlinge. </p>
+           </div> 
+            <input id="input2" type="reset" value="Neues Spiel">
+            
+            <div id=tabelle>
+            <table>    
+                <tr>
+                    <th>Name</th>
+                    <td><input type="text" name="player"></td>
+                    <td><input type="text" name="player"></td>
+                    <td><input type="text" name="player"></td>
+                    <td><input type="text" name="player"></td>
+                    <td><input type="text" name="player"></td>
+                    <td><input type="text" name="player"></td>
+                </tr>
+                <tr>
+                    <th>Angesagte Stiche</th>
+                    <td><input type="number" disabled name="s-player"></td>
+                    <td><input type="number" disabled name="s-player"></td>
+                    <td><input type="number" disabled name="s-player"></td>
+                    <td><input type="number" disabled name="s-player"></td>
+                    <td><input type="number" disabled name="s-player"></td>
+                    <td><input type="number" disabled name="s-player"></td>
+                </tr>
+                <tr>
+                    <th>Gewonnene Stiche</th>
+                    <td><input type="number" disabled name="fs-player"></td>
+                    <td><input type="number" disabled name="fs-player"></td>
+                    <td><input type="number" disabled name="fs-player"></td>
+                    <td><input type="number" disabled name="fs-player"></td>
+                    <td><input type="number" disabled name="fs-player"></td>
+                    <td><input type="number" disabled name="fs-player"></td>
+                </tr>
+                <tr id="ergebnis"> 
+                    <th>Zwischenstand</th>
+                    <td class="zwischenstand-player"></td>
+                    <td class="zwischenstand-player"></td>
+                    <td class="zwischenstand-player"></td>
+                    <td class="zwischenstand-player"></td>
+                    <td class="zwischenstand-player"></td>
+                    <td class="zwischenstand-player"></td>
+                </tr>    
+            </table>
+        </div>
+                <input id="input1" type="submit" value="Los geht's!">
+            </form>
+              <p id="runde">Ihr habt noch nicht angefangen zu spielen</p>
+            <div id="wz">  
+            <!-- <div>
+            <figure> 
+                <img src="wizzard.jpg" alt="Wizzard Spielverpackung">
+                <!-- <figcaption> Wizard Spieleverpackung</figcaption> -->
+            </figure>
+            </div> -->
+            <div>
+                <h1> Spielregeln</h1>
+                <p>Ein Spiel hat 10 bis 20 Runden. In der ersten Runde bekommt jeder Spieler eine Spielkarte, in der zweiten zwei und so weiter. Die restlichen Karten werden verdeckt in die Mitte gelegt, nur die oberste wird aufgedeckt. Ihre Farbe ist die Trumpffarbe. Ist diese Karte ein Narr oder bleibt keine Karte übrig, so gibt es keine Trumpffarbe. Wird ein Zauberer aufgedeckt, bestimmt der ausgebende Spieler die Trumpffarbe, nachdem er seine Handkarten angeschaut hat. Nun müssen die Spieler der Reihe nach schätzen, wie viele Stiche sie in der Runde machen werden. Der Spieler links vom Geber beginnt, die Angaben werden in der Tabelle notiert. <br> <small>Wird mit der <i>Canadian Rule </i> oder <i>Plus/minus-Eins-Variante </i> gespielt, darf die Summe der geschätzten Stiche nicht gleich der Zahl der erwarteten Stiche sein. Wenn zum Beispiel bei fünf Karten drei Stiche angesagt wurden, dürfte der letzte Spieler nicht „zwei“ sagen.</small><br>Sind alle Angaben gemacht, spielt der Spieler links vom Geber eine Karte aus, die anderen folgen im Uhrzeigersinn: ein <i>Stich</i>.</p>
+                <ol>
+                    <li>Ein Zauberer oder ein Narr kann immer ausgespielt werden.</li>
+                    <li>Narren am Anfang eines Stiches haben auf das Folgende keinen Einfluss.</li>
+                    <li>Ist die erste Karte eines Stiches (nach möglichen Narren) ein Zauberer, können danach beliebige Karten ausgespielt werden.</li>
+                    <li>Sonst ist die Farbe der ersten nicht närrischen Karte diejenige, welche <i>bedient</i> werden muss (das kann auch die Trumpffarbe sein): Jeder Spieler, der mindestens eine Karte dieser Farbe auf der Hand hat, muss eine solche ausspielen. Wer die geforderte Farbe nicht hat, darf eine beliebige andere Karte ausspielen.</li>
+                </ol>
+                <p>Haben alle Spieler eine Karte ausgespielt, so bekommt der Spieler mit der höchsten Karte den Stich. Es gilt:</p>
+                <ol>
+                    <li>Der <i>erste gespielte</i> Zauberer sticht immer.</li>
+                    <li>Ist kein Zauberer gespielt worden, so sticht der <i>höchste Trumpf</i> über die anderen Karten.</li>
+                    <li>Sind kein Zauberer und kein Trumpf gespielt worden, so bekommt derjenige Spieler den Stich, der die <i>höchste Karte der geforderten Farbe</i> gespielt hat.</li>
+                    <li>Ein Narr macht keinen Stich, es sei denn, in einem Stich werden nur Narren gespielt. In diesem Fall gewinnt der erste Narr den Stich.</li>
+                    <li>Jeder Spieler legt die Stiche, die er gemacht hat, zur Seite. Sind alle Stiche gespielt (in der ersten Runde einer, in der zweiten zwei usw.), zählt jeder zusammen, wie viele Stiche er gemacht hat. Stimmt dieser Wert mit der zuvor abgegebenen Prognose überein, bekommt der Spieler <i>20 Punkte</i> für die richtige Prognose sowie <i>10 Punkte</i> für jeden Stich. Stimmt sie nicht mit der Prognose überein, bekommt er für jeden Stich Abweichung <i>10 Minuspunkte</i>.</li>
+                    <li>Beispiel: Spieler A hat drei Stiche prognostiziert und diese auch bekommen; er erhält 20 + (3·10) = 50 Punkte. Spieler B hat vier Stiche prognostiziert, aber nur zwei bekommen; er erhält 20 Minuspunkte. Spielerin C hat null Stiche prognostiziert und auch keine bekommen; sie erhält 20 Punkte (für die richtige Prognose).</li>
+                </ol>
+            </div>
+        </div>            
+        </main>
+        <div id="success-nachricht"></div>
+        <div id="failure-nachricht"></div>
+    </body>
+</html>
